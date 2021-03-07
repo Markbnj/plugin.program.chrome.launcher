@@ -33,9 +33,6 @@ if not os.path.isdir(profileFolder):
 if not os.path.isdir(siteFolder):
     os.mkdir(siteFolder)
 
-youtubeUrl = "http://www.youtube.com/leanback"
-vimeoUrl = "http://www.vimeo.com/couchmode"
-
 
 def index():
     files = os.listdir(siteFolder)
@@ -62,8 +59,6 @@ def index():
                     stopPlayback = content.strip()
             fh.close()
             addSiteDir(title, url, 'showSite', thumb, stopPlayback, kiosk)
-    addDir("[ Vimeo Couchmode ]", vimeoUrl, 'showSite', os.path.join(addonPath, "vimeo.png"), "yes", "yes")
-    addDir("[ Youtube Leanback ]", youtubeUrl, 'showSite', os.path.join(addonPath, "youtube.png"), "yes", "yes")
     addDir("[B]- "+translation(30001)+"[/B]", "", 'addSite', "")
     xbmcplugin.endOfDirectory(pluginhandle)
 
