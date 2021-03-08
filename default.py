@@ -236,6 +236,8 @@ def addSiteDir(name, url, mode, iconimage, stopPlayback, kiosk):
     ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=u, listitem=liz, isFolder=True)
     return ok
 
+import web_pdb; web_pdb.set_trace()
+
 params = parameters_string_to_dict(sys.argv[2])
 mode = urllib.unquote_plus(params.get('mode', ''))
 name = urllib.unquote_plus(params.get('name', ''))
