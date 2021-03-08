@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.program.web.launcher" name="Web Launcher" version="1.1.1" provider-name="Mark Betz (@markbnj)">
     <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.web-pdb" version="1.5.6"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
