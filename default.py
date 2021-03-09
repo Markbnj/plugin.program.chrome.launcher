@@ -8,6 +8,7 @@ import subprocess
 import xbmcplugin
 import xbmcgui
 import xbmcaddon
+import xbmcvfs
 
 
 addon = xbmcaddon.Addon()
@@ -20,9 +21,9 @@ osOsx = xbmc.getCondVisibility('system.platform.osx')
 osLinux = xbmc.getCondVisibility('system.platform.linux')
 useOwnProfile = addon.getSetting("useOwnProfile") == "true"
 useCustomPath = addon.getSetting("useCustomPath") == "true"
-customPath = xbmc.translatePath(addon.getSetting("customPath"))
+customPath = xbmcvfs.translatePath(addon.getSetting("customPath"))
 
-userDataFolder = xbmc.translatePath("special://profile/addon_data/"+addonID)
+userDataFolder = xbmcvfs.translatePath("special://profile/addon_data/"+addonID)
 profileFolder = os.path.join(userDataFolder, 'profile')
 siteFolder = os.path.join(userDataFolder, 'sites')
 
