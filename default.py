@@ -96,7 +96,7 @@ def addSite(site="", title=""):
 
 
 def getFileName(title):
-    return (''.join(c for c in unicode(title, 'utf-8') if c not in '/\\:?"*|<>')).strip()
+    return (''.join(c if c.isalnum() else "_" for c in title)).strip()
 
 
 def getFullPath(path, url, useKiosk, userAgent):
