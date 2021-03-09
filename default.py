@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import urllib
+from urllib.parse import quote_plus, unquote_plus
 import sys
 import re
 import os
@@ -219,7 +219,7 @@ def parameters_string_to_dict(parameters):
 
 
 def addDir(name, url, mode, iconimage, stopPlayback="", kiosk=""):
-    u = sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+urllib.quote_plus(mode)+"&stopPlayback="+urllib.quote_plus(stopPlayback)+"&kiosk="+urllib.quote_plus(kiosk)
+    u = sys.argv[0]+"?url="+quote_plus(url)+"&mode="+quote_plus(mode)+"&stopPlayback="+quote_plus(stopPlayback)+"&kiosk="+quote_plus(kiosk)
     ok = True
     liz = xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
     liz.setInfo(type="Video", infoLabels={"Title": name})
@@ -228,23 +228,23 @@ def addDir(name, url, mode, iconimage, stopPlayback="", kiosk=""):
 
 
 def addSiteDir(name, url, mode, iconimage, stopPlayback, kiosk):
-    u = sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+urllib.quote_plus(mode)+"&stopPlayback="+urllib.quote_plus(stopPlayback)+"&kiosk="+urllib.quote_plus(kiosk)
+    u = sys.argv[0]+"?url="+quote_plus(url)+"&mode="+quote_plus(mode)+"&stopPlayback="+quote_plus(stopPlayback)+"&kiosk="+quote_plus(kiosk)
     ok = True
     liz = xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
     liz.setInfo(type="Video", infoLabels={"Title": name})
-    liz.addContextMenuItems([(translation(30006), 'RunPlugin(plugin://'+addonID+'/?mode=editSite&url='+urllib.quote_plus(name)+')',), (translation(30002), 'RunPlugin(plugin://'+addonID+'/?mode=removeSite&url='+urllib.quote_plus(name)+')',)])
+    liz.addContextMenuItems([(translation(30006), 'RunPlugin(plugin://'+addonID+'/?mode=editSite&url='+quote_plus(name)+')',), (translation(30002), 'RunPlugin(plugin://'+addonID+'/?mode=removeSite&url='+quote_plus(name)+')',)])
     ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=u, listitem=liz, isFolder=True)
     return ok
 
 import web_pdb; web_pdb.set_trace()
 
 params = parameters_string_to_dict(sys.argv[2])
-mode = urllib.unquote_plus(params.get('mode', ''))
-name = urllib.unquote_plus(params.get('name', ''))
-url = urllib.unquote_plus(params.get('url', ''))
-stopPlayback = urllib.unquote_plus(params.get('stopPlayback', 'no'))
-kiosk = urllib.unquote_plus(params.get('kiosk', 'yes'))
-userAgent = urllib.unquote_plus(params.get('userAgent', ''))
+mode = unquote_plus(params.get('mode', ''))
+name = unquote_plus(params.get('name', ''))
+url = unquote_plus(params.get('url', ''))
+stopPlayback = unquote_plus(params.get('stopPlayback', 'no'))
+kiosk = unquote_plus(params.get('kiosk', 'yes'))
+userAgent = unquote_plus(params.get('userAgent', ''))
 
 
 if mode == 'addSite':
