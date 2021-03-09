@@ -1,0 +1,64 @@
+# Kodi Media Center language file
+# Addon Name: Web Launcher
+# Addon id: plugin.program.web.launcher
+# Addon Provider: Markbnj
+msgid ""
+msgstr ""
+"Project-Id-Version: Web Launcher\n"
+"Report-Msgid-Bugs-To: https://github.com/Markbnj/plugin.program.web.launcher/issues\n"
+"POT-Creation-Date: 2021-03-09 19:30+0000\n"
+"PO-Revision-Date: 2021-03-09 19:30+0000\n"
+"Last-Translator: markbnj\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30001"
+msgid "Add Website"
+msgstr "Website hinzufügen"
+
+msgctxt "#30002"
+msgid "Remove Website"
+msgstr "Website entfernen"
+
+msgctxt "#30003"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "#30004"
+msgid "URL"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Chrome not found"
+msgstr "Chrome nicht gefunden"
+
+msgctxt "#30006"
+msgid "Edit Website Settings"
+msgstr "Website Einstellungen ändern"
+
+msgctxt "#30007"
+msgid "Thumbnail"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Stop XBMC Playback"
+msgstr "XBMC Wiedergabe stoppen?"
+
+msgctxt "#30010"
+msgid "Use custom Chrome/script path"
+msgstr "Benutzerdefinierten Chrome/Skript Pfad nutzen"
+
+msgctxt "#30011"
+msgid "Chrome/script path"
+msgstr "Chrome/Skript Pfad"
+
+msgctxt "#30012"
+msgid "Use own user profile?"
+msgstr "Eigenes Nutzerprofil nutzen"
+
+msgctxt "#30016"
+msgid "Use kiosk mode?"
+msgstr ""
